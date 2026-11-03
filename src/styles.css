@@ -37,37 +37,41 @@
 :root {
   --radius: 0.5rem;
 
-  /* Backend engineer terminal-dark palette */
-  --background: oklch(0.145 0.015 260);
-  --foreground: oklch(0.92 0.01 250);
-  --card: oklch(0.185 0.018 260);
-  --card-foreground: oklch(0.92 0.01 250);
-  --popover: oklch(0.185 0.018 260);
-  --popover-foreground: oklch(0.92 0.01 250);
-  --primary: oklch(0.78 0.16 155);
-  --primary-foreground: oklch(0.16 0.02 260);
-  --secondary: oklch(0.22 0.02 260);
+  /* Backend engineer terminal-dark palette with Brand Purple & Lavender */
+  --background: #0B0A12;
+  --foreground: oklch(0.94 0.01 250);
+  --card: #12101E;
+  --card-foreground: oklch(0.94 0.01 250);
+  --popover: #12101E;
+  --popover-foreground: oklch(0.94 0.01 250);
+  --primary: #8B5CF6;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1A172B;
   --secondary-foreground: oklch(0.92 0.01 250);
-  --muted: oklch(0.22 0.02 260);
-  --muted-foreground: oklch(0.65 0.02 255);
-  --accent: oklch(0.24 0.025 260);
-  --accent-foreground: oklch(0.92 0.01 250);
+  --muted: #1A172B;
+  --muted-foreground: oklch(0.68 0.02 255);
+  --accent: #221D3B;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.02 260);
-  --input: oklch(0.28 0.02 260);
-  --ring: oklch(0.78 0.16 155);
+  --destructive-foreground: #FFFFFF;
+  --border: #242038;
+  --input: #242038;
+  --ring: #8B5CF6;
 
-  /* Custom semantic tokens */
+  /* Brand and terminal semantic tokens */
+  --brand-purple: #8B5CF6;
+  --brand-lavender: #D5BBFF;
   --terminal-green: oklch(0.78 0.16 155);
   --terminal-amber: oklch(0.8 0.14 85);
   --terminal-blue: oklch(0.72 0.12 230);
-  --terminal-purple: oklch(0.7 0.12 300);
-  --surface-raised: oklch(0.2 0.02 260);
+  --terminal-purple: #8B5CF6;
+  --surface-raised: #161426;
   --grid-line: oklch(1 0 0 / 4%);
 }
 
 @theme inline {
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-lavender: var(--brand-lavender);
   --color-terminal-green: var(--terminal-green);
   --color-terminal-amber: var(--terminal-amber);
   --color-terminal-blue: var(--terminal-blue);
@@ -99,7 +103,7 @@
 }
 
 @utility text-glow {
-  text-shadow: 0 0 24px oklch(0.78 0.16 155 / 35%);
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.45);
 }
 
 @utility bg-grid {
@@ -117,8 +121,8 @@
 
   &:hover {
     transform: translateY(-4px);
-    border-color: oklch(0.78 0.16 155 / 40%);
-    box-shadow: 0 12px 40px -12px oklch(0.78 0.16 155 / 15%);
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: 0 12px 40px -12px rgba(139, 92, 246, 0.22);
   }
 }
 
