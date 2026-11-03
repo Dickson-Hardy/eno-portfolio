@@ -17,20 +17,32 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eno Osuji — Backend Engineer" },
+      { title: "Eno Osuji — Backend Engineer | APIs & Distributed Systems" },
       {
         name: "description",
         content:
-          "Backend engineer building APIs and reliable server-side applications. Skills, projects, and contact.",
+          "Portfolio of Eno Osuji, a backend engineer building high-performance APIs, distributed systems, and reliable server-side applications.",
       },
-      { property: "og:title", content: "Eno Osuji — Backend Engineer" },
+      { property: "og:title", content: "Eno Osuji — Backend Engineer | APIs & Distributed Systems" },
       {
         property: "og:description",
         content:
-          "Backend engineer building APIs and reliable server-side applications.",
+          "Portfolio of Eno Osuji, a backend engineer building high-performance APIs, distributed systems, and reliable server-side applications.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://pro-code-port.lovable.app" },
+      { property: "og:image", content: "https://pro-code-port.lovable.app/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Eno Osuji — Backend Engineer Portfolio" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Eno Osuji — Backend Engineer | APIs & Distributed Systems" },
+      {
+        name: "twitter:description",
+        content:
+          "Portfolio of Eno Osuji, a backend engineer building high-performance APIs, distributed systems, and reliable server-side applications.",
+      },
+      { name: "twitter:image", content: "https://pro-code-port.lovable.app/og-image.png" },
     ],
   }),
   component: Portfolio,
@@ -104,13 +116,23 @@ function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
-        <a href="#top" className="font-mono text-sm font-semibold text-primary">
-          ~/eno-osuji
+        <a
+          href="#top"
+          className="flex items-center gap-2.5 font-mono text-sm font-semibold text-primary transition-opacity hover:opacity-90"
+        >
+          <img src="/logo.svg" alt="Eno Osuji Monogram" className="h-6 w-auto" />
+          <span>~/eno-osuji</span>
         </a>
         <div className="hidden items-center gap-6 text-sm text-muted-foreground sm:flex">
-          <a href="#about" className="transition-colors hover:text-primary">About</a>
-          <a href="#skills" className="transition-colors hover:text-primary">Skills</a>
-          <a href="#projects" className="transition-colors hover:text-primary">Projects</a>
+          <a href="#about" className="transition-colors hover:text-primary">
+            About
+          </a>
+          <a href="#skills" className="transition-colors hover:text-primary">
+            Skills
+          </a>
+          <a href="#projects" className="transition-colors hover:text-primary">
+            Projects
+          </a>
           <a
             href="#contact"
             className="rounded-md border border-primary/40 px-3 py-1.5 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
@@ -135,7 +157,10 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.78_0.16_155/8%),transparent_60%)]" />
       <div className="relative mx-auto flex max-w-5xl flex-col gap-10 px-5 pb-20 pt-32 sm:pt-40 lg:flex-row lg:items-center lg:gap-14">
         <div className="flex-1 animate-fade-up">
-          <p className="font-mono text-sm text-primary">$ whoami</p>
+          <div className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Eno Osuji Mark" className="h-9 w-auto" />
+            <p className="font-mono text-sm text-primary">$ whoami</p>
+          </div>
           <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Eno Osuji
           </h1>
@@ -229,6 +254,17 @@ function About() {
             </p>
           </div>
           <div className="space-y-3">
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
+              <img
+                src="/avatar.png"
+                alt="Eno Osuji"
+                className="h-10 w-10 shrink-0 rounded-md border border-border object-cover"
+              />
+              <div>
+                <p className="text-sm font-semibold text-foreground">Eno Osuji</p>
+                <p className="font-mono text-xs text-muted-foreground">Backend & Systems Specialist</p>
+              </div>
+            </div>
             {[
               { icon: GitBranch, label: "API-first development" },
               { icon: Cloud, label: "Cloud-native deployments" },
@@ -357,9 +393,12 @@ function Footer() {
   return (
     <footer className="border-t border-border/60">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm text-muted-foreground sm:flex-row">
-        <p className="font-mono text-xs">
-          <span className="text-primary">➜</span> © 2023 Eno Osuji
-        </p>
+        <div className="flex items-center gap-2.5">
+          <img src="/logo.svg" alt="Eno Osuji Mark" className="h-4 w-auto opacity-70" />
+          <p className="font-mono text-xs">
+            <span className="text-primary">➜</span> © {new Date().getFullYear()} Eno Osuji
+          </p>
+        </div>
         <p className="font-mono text-xs">built with uptime in mind</p>
       </div>
     </footer>
