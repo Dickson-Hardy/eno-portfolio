@@ -8,10 +8,9 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -36,11 +35,8 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
-  console.error(error);
+  console.error("Runtime error caught by root boundary:", error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -100,8 +96,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Portfolio of Eno Osuji, a backend engineer specializing in high-performance APIs, distributed systems, and reliable server architectures.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://pro-code-port.lovable.app" },
-      { property: "og:image", content: "https://pro-code-port.lovable.app/og-image.png" },
+      { property: "og:url", content: "https://enoosuji.com" },
+      { property: "og:image", content: "https://enoosuji.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Eno Osuji — Backend Engineer Portfolio" },
@@ -112,11 +108,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Portfolio of Eno Osuji, a backend engineer specializing in high-performance APIs, distributed systems, and reliable server architectures.",
       },
-      { name: "twitter:image", content: "https://pro-code-port.lovable.app/og-image.png" },
+      { name: "twitter:image", content: "https://enoosuji.com/og-image.png" },
       { name: "twitter:image:alt", content: "Eno Osuji — Backend Engineer Portfolio" },
     ],
     links: [
-      { rel: "canonical", href: "https://pro-code-port.lovable.app/" },
+      { rel: "canonical", href: "https://enoosuji.com/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -142,8 +138,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Person",
           name: "Eno Osuji",
           jobTitle: "Backend Engineer",
-          url: "https://pro-code-port.lovable.app",
-          image: "https://pro-code-port.lovable.app/avatar.png",
+          url: "https://enoosuji.com",
+          image: "https://enoosuji.com/avatar.png",
           email: "mailto:enoosuji@gmail.com",
           address: {
             "@type": "PostalAddress",
@@ -191,7 +187,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );

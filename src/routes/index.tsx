@@ -30,8 +30,8 @@ export const Route = createFileRoute("/")({
           "Portfolio of Eno Osuji, a backend engineer building high-performance APIs, distributed systems, and reliable server-side applications.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://pro-code-port.lovable.app" },
-      { property: "og:image", content: "https://pro-code-port.lovable.app/og-image.png" },
+      { property: "og:url", content: "https://enoosuji.com" },
+      { property: "og:image", content: "https://enoosuji.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Eno Osuji — Backend Engineer Portfolio" },
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Eno Osuji, a backend engineer building high-performance APIs, distributed systems, and reliable server-side applications.",
       },
-      { name: "twitter:image", content: "https://pro-code-port.lovable.app/og-image.png" },
+      { name: "twitter:image", content: "https://enoosuji.com/og-image.png" },
     ],
   }),
   component: Portfolio,
@@ -97,12 +97,12 @@ const projects = [
     status: "production",
   },
   {
-    name: "expense-tracker",
-    type: "Open Source — Web App",
+    name: "kitchen-order-api",
+    type: "Kitchen Ordering API & WhatsApp Bot",
     description:
-      "Personal expense tracker built with Django and Bootstrap. Filter entries by name or price, sort by date or image availability, and track monthly totals against a set budget.",
-    stack: ["Django", "Bootstrap", "Python"],
-    status: "open-source",
+      "High-throughput conversational ordering backend powered by Meta WhatsApp Cloud API webhooks. Implements session-based cart state machines in Redis, dynamic interactive menu dispatch, automated payment webhook verification, and real-time Kitchen Display System (KDS) order routing via WebSockets with instant customer status tracking.",
+    stack: ["Node.js", "PostgreSQL", "Redis", "WhatsApp Cloud API", "WebSockets"],
+    status: "production",
   },
 ];
 

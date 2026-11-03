@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://pro-code-port.lovable.app/sitemap.xml
+Sitemap: https://enoosuji.com/sitemap.xml

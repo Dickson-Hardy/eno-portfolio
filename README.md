@@ -1,26 +1,49 @@
-# Pro Code Port
+# Eno Osuji — Backend Engineer Portfolio
 
-I would like to build a portfolio as a back end engineer, who builds API's and reliable server side applications. It should Include, An about section, Skills, proposed projects, contact sections, mobile friendly interface.
+> Portfolio of Eno Osuji, a backend engineer building high-performance APIs and reliable server-side systems.
 
-This project was built with [Lovable](https://lovable.dev).
+**Live Website**: [https://enoosuji.com](https://enoosuji.com)
 
-**Live app**: https://pro-code-port.lovable.app
+---
 
-## Build with Lovable
+## 🛠️ Tech Stack & Architecture
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/87d2fa1d-4f07-4ac5-849d-43d35513b20e).
+- **Framework**: TanStack Start (SSR & Modern Fullstack Routing)
+- **Styling**: Tailwind CSS v4, JetBrains Mono & Inter typography
+- **Components**: Radix UI primitives, Lucide React
+- **Client & State**: TanStack React Query, React 19
+- **Package Manager**: pnpm
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+---
 
-## Development
+## 🚀 Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Prerequisites
+- Node.js >= 20
+- pnpm >= 10
 
+### Setup & Run
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Run unit tests
+pnpm test
+
+# Build for production
+pnpm run build
 ```
+
+---
+
+## 📁 Key Sections & Projects
+
+- **About**: Background, engineering philosophy, and remote readiness.
+- **Skills**: API Design, Databases, Languages (Node.js, TypeScript, Python, Go), DevOps, Reliability & Performance, Security.
+- **Projects**:
+  - `lab-info-system`: Laboratory Information System backend with TCP/IP HL7/ASTM analyzer protocol integration.
+  - `kitchen-order-api`: Conversational WhatsApp ordering backend and real-time Kitchen Display System (KDS) integration.
+- **Contact**: Direct contact and inquiries.
